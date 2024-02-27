@@ -8,4 +8,9 @@ section .text
     syscall
 %endmacro
 
+%macro _check_sys 1
+    cmp rax, -1
+
+%endmacro
+
 

@@ -8,24 +8,31 @@ section .data
     SYS_ACCEPT equ 0x200001E
     SYS_LISTEN equ 0x200006A
 
-
-
     AF_INET equ 2
     SOCK_STREAM equ 1
-
-
-
+    O_RDONLY equ 0
 
     message db "Hello, World!", 0x0A
     message_len equ $ - message
     STDOUT equ 1
     STDIN equ 0
     STDERR equ 2
+
     address:
         dw AF_INET
         dw 0x901F
         dd 0
         dq 0
+
+    path:
+        db "index.html", 0
+
+    buffer:
+       dp 256 dup 0 
+
+    buffer1:
+        dp 256 dup 0
+        
 
 
 
