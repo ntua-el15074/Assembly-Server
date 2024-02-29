@@ -28,10 +28,10 @@ section .data
         db "index.html", 0
 
     buffer:
-       dp 256 dup 0 
+       db 256 dup 0 
 
     buffer1:
-        dp 256 dup 0
+        db 256 dup 0
         
 
 
